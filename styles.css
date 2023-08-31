@@ -1,0 +1,452 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: black;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.stop-scroll{
+    overflow: hidden;
+}
+
+.overlay-show{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+a{
+    color: #262626;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.dark{
+    color: #fff;
+
+}
+
+.dark .btn{
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: #fff;
+    font-size: 15px;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+/* NAV */
+
+.main-nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+    font-size: 13px ;
+    justify-content: space-between;
+}
+
+.main-nav .logo{
+    width: 110px;
+}
+
+.main-nav ul{
+    display: flex;
+}
+
+.main-nav ul li{
+    padding: 0 12px;
+    position: relative;
+}
+
+
+
+.main-nav ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 70%;
+    height: 1px;
+    background-color: #232323;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.main-nav ul li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition-duration: 0.4s;
+
+}
+
+.main-nav ul.main-menu{
+    flex: 1;
+    margin-left: 20px;
+}
+
+
+/* SHOWCASE */
+
+.showcase{
+    width: 100%;
+    height: 400px;
+    background: url('https://i.ibb.co/zGSDGCL/slide1.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+.showcase h2, .showcase p{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.showcase .btn{
+    margin-top: 20px;
+}
+
+
+/* HOME CARDS 1 */
+
+.home-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.home-cards img{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color:#000;
+    transition: filter 0.3s ease-in-out;
+}
+
+.home-cards img:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+
+}
+
+.home-cards h3{
+    margin-bottom: 5px;
+}
+
+.home-cards h3:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.home-cards a{
+    display: inline-block;
+    padding-top: 10px;
+    color: #0067b8;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.home-cards a i{
+transition: transform 0.3s ease-in-out;
+}
+
+
+.home-cards a:hover i{
+    transform: translateX(5px);
+}
+
+
+/* XBOX */
+
+.xbox{
+    height: 350px;
+    width: 100%;
+    background: url('https://i.ibb.co/tBJGPD9/xbox.png') no-repeat center center/cover;
+    margin-bottom: 20px;
+}
+
+
+.xbox .content{
+    width: 40%;
+    padding: 50px 0 0 30px;
+}
+
+.xbox p{
+    margin: 10px 0 20px;
+}
+
+
+/* CARBON */
+
+.carbon{
+    height: 350px;
+    width: 100%;
+    background: url('https://i.ibb.co/72cgtsz/carbon.jpg') no-repeat center center/cover;
+}
+
+
+.carbon .content{
+    width: 55%;
+    padding: 100px 0 0 30px;
+}
+
+.carbon p{
+    margin: 10px 0 20px;
+}
+
+/*  FOLLOW  */
+
+.follow{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 30px 0 20px 30px;
+}
+
+.follow * {
+    margin-right: 10px;
+}
+
+
+/*  LINKS */
+
+.links{
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+.links-inner{
+    max-width: 1100px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.links li {
+    line-height: 2.8;
+}
+
+
+/* FOOTER */
+
+.footer{
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+}
+
+.footer-inner{
+    max-width: 1100px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-inner ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-inner i{
+    margin-right: 10px;
+}
+
+.footer-inner div{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-inner ul li{
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+/* HAMBURGER MENU */
+
+.menu-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 3;
+    display: none;
+}
+
+
+/* MEDIA QUERIES */
+
+@media(max-width:700px){
+
+
+    /* Hamburger Menu */
+    .menu-btn{
+        display: block;
+    }
+
+    .menu-btn:hover{
+        opacity: 0.5;
+    }
+
+    .main-nav{
+        position:static;
+    }
+
+    .main-nav ul.main-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #f2f2f2;
+        width: 50%;
+        height: 100%;
+        border-right: #ccc 1px solid;
+        opacity: 0.9;
+        z-index: 3;
+        padding: 30px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .main-nav ul.main-menu.show{
+        transform: translateX(-20px);
+    }
+
+    .main-nav ul.main-menu li{
+        padding: 10px;
+        border-bottom: #ccc 1px solid;
+        font-size: 14px;
+    }
+
+    .main-nav ul.main-menu li:last-child{
+        border-bottom: 0;
+    }
+
+    .main-nav ul.right-menu {
+        margin-right: 50px;
+    }
+
+    .main-nav ul li a::after{
+        left: 0;
+        width: 100%;
+    }
+
+
+
+    /* END OF HAMBURGER MENU */
+    .home-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .xbox .content p{
+        display: none;
+    }
+
+    .xbox .content h2{
+        margin-bottom: 30px;
+    }
+
+    .carbon .content{
+        width: 85%;
+    }
+
+    .follow{
+        margin-left: 0;
+    }
+
+    
+    .links-inner{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
+
+@media(max-width:500px){
+
+    .home-cards{
+        grid-template-columns: 1fr;
+    }
+
+    .showcase h2,
+    .showcase p{
+        margin: 0 10px 10px;
+    }
+
+    .home-cards div{
+        margin-bottom: 20px;
+    }
+
+    .links .links-inner{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-inner ul li{
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+
+
